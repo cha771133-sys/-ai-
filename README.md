@@ -1,4 +1,4 @@
-# -ai-
+# --
 
 React(Vite + TypeScript) 프론트엔드와 Django(DRF) 백엔드로 구성된 프로젝트입니다.
 
