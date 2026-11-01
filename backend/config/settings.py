@@ -152,6 +152,11 @@ MAILERS = {
 
 CORS_ALLOWED_ORIGINS = env_list('CORS_ALLOWED_ORIGINS', 'http://localhost:5173')
 
+CORS_ALLOWED_ORIGIN_REGEXES = env_list(
+    'CORS_ALLOWED_ORIGIN_REGEXES',
+    r'^https://chungnam-on-[a-z0-9-]+-cha771133-1587s-projects\.vercel\.app$',
+)
+
 CSRF_TRUSTED_ORIGINS = [
     *CORS_ALLOWED_ORIGINS,
     *(
