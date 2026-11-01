@@ -78,7 +78,7 @@ git push origin feature/be-document-api
 ### 머지 담당
 
 - 모든 PR의 merge는 **차성진**이 일괄 진행합니다.
-- 머지 담당이 부재 중일 때는 대리인 **(대리인 이름)**이 merge합니다.
+- 머지 담당이 부재 중일 때는 대리인 **TODO: 대리인 지정**이 merge합니다.
 - 그 외 팀원은 merge 버튼을 누르지 않습니다.
 
 ### 리뷰
@@ -92,7 +92,7 @@ git push origin feature/be-document-api
 1. Reviewers에 리뷰할 팀원, Assignees에 본인 지정
 2. 템플릿에 관련 이슈를 `close #이슈번호`로 적기 → `dev`에 merge되면 이슈가 자동으로 닫힘
 3. 팀 채팅에 PR 링크 공유
-4. 충돌이 생기면 **PR 작성자**가 `dev`를 pull 받아 해결한 뒤 다시 push
+4. 충돌이 생기면 **PR 작성자**가 `dev`를 pull 받아 해결한 뒤 다시 push (Django 마이그레이션 충돌은 `python manage.py makemigrations --merge`로 해결)
 
 ### PR 템플릿
 
@@ -126,3 +126,9 @@ git push origin feature/be-document-api
 | `docs` | 문서 | `docs: README 실행 방법 추가` |
 | `chore` | 설정, 패키지 | `chore: whitenoise 설치` |
 | `test` | 테스트 코드 | `test: 업로드 API 테스트 추가` |
+
+---
+
+## 🔒 보안
+
+- `.env` 파일은 커밋하지 않습니다. 필요한 변수는 값 없이 `.env.example`에만 추가합니다.
